@@ -1,0 +1,32 @@
+{
+  "Concurrency" :200,
+  "Clients": 1,
+  "ScanSpecs" : [
+   {
+     "Type" : "MultiScan",
+     "Bucket" : "userdata",
+     "Id" : 1,
+     "Index" : "composite",
+     
+     "Repeat" : 100000,
+     "Consistency": false,
+     "NInterval": 100,
+     "Scans" : [
+            {
+                "Filter" : [
+                    {
+                        "Low" : "aa",
+                        "High" : "al",
+                        "Inclusion" : 0
+                    },
+                    {
+                        "Low" : 0,
+                        "High" : 9847,
+                        "Inclusion" : 3
+                    }
+                ]
+	    }
+     ]           
+   }
+  ]
+}
